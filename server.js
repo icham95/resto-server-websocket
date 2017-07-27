@@ -21,6 +21,7 @@ var date = require('./scratch/date')
 io.on('connection', (socket) => {
 	cashier.auth(socket, io, pool)
 	cashier.payFromCashier(socket, io, pool)
+	cashier.payGroupedFromCashier(socket, io, pool)
 
 	waiter.auth(socket, io, pool)
 	waiter.getDataTables(socket, io, pool)
